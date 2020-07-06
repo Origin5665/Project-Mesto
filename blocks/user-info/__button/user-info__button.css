@@ -1,0 +1,27 @@
+.user-info__button {
+	position: absolute;
+	top: 16px;
+	right: 0;
+	transition: linear 0.1s;
+}
+
+.user-info__button:hover {
+	background: rgb(7, 62, 126);
+	border: none;
+}
+
+.user-info__button:focus {
+	background: rgb(7, 62, 126);
+	border: none;
+}
+
+.user-info__button:before {
+	content: '+';
+}
+
+@media screen and (max-width: 1060px) {
+	.user-info__button {
+		position: static;
+		margin-bottom: 40px;
+	}
+}

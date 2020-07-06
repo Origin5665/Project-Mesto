@@ -1,0 +1,27 @@
+.user-info__photo {
+  width: 150px;
+  height: 150px;
+  min-width: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  -moz-transition: .2s ease;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+
+.user-info__photo:hover {
+  -moz-transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+  box-shadow: 0px 26px 80px -19px rgba(16, 115, 207, 0.74);
+}
+
+
+
+@media screen and (max-width: 1060px) {
+  .user-info__photo {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,22 @@
+@import url(./__image/place-card__image.css);
+@import url(./__image/_city/_karachaevsk/place-card__image_city_karachaevsk.css);
+@import url(./__delete-icon/place-card__delete-icon.css);
+@import url(./__description/place-card__description.css);
+@import url(./__name/place-card__name.css);
+@import url(./__like-icon/place-card__like-icon.css);
+@import url(./__like-container/place-card__like-container.css);
+@import url(./__remove/place-card__remove.css);
+
+.place-card {
+  position: relative;
+  width: 280px;
+  background-color: #fff;
+  border-radius: 10px;
+  min-height: 360px;
+
+}
+
+.place-card__is-mine {
+  border-bottom: 6px solid rgb(29, 96, 221);
+  border-collapse: separate;
+}

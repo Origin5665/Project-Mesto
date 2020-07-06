@@ -1,0 +1,30 @@
+.user-info__button-edit {
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	width: 40px;
+	height: 20px;
+	font-size: 12px;
+	line-height: 15px;
+	display: block;
+	cursor: pointer;
+	margin-top: 24px;
+	transition: linear 0.15s;
+}
+
+.user-info__button-edit:focus {
+	background: rgb(7, 62, 126);
+	border: none;
+}
+
+.user-info__button-edit:hover {
+	background: rgb(7, 62, 126);
+	border: none;
+}
+
+@media screen and (max-width: 1060px) {
+	.user-info__button-edit {
+		margin: 0 auto;
+		margin-top: 15px;
+	}
+}

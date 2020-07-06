@@ -1,4 +1,4 @@
-class UserInfo {
+export default class UserInfo {
     constructor(authorName, authorAbout, profileAuthor, profileAbout, photoElement) {
         this.authorName = authorName;
         this.authorAbout = authorAbout;

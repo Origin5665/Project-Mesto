@@ -3,11 +3,14 @@
 	top: 16px;
 	right: 0;
 	transition: linear 0.1s;
+	outline: none;
+	box-sizing: border-box;
 }
 
 .user-info__button:hover {
 	background: rgb(7, 62, 126);
 	border: none;
+	transform: scale(1.10);
 }
 
 .user-info__button:focus {
@@ -15,8 +18,11 @@
 	border: none;
 }
 
-.user-info__button:before {
-	content: '+';
+
+
+.user-info__button:active {
+	transform: scale(0.95);
+
 }
 
 @media screen and (max-width: 1060px) {

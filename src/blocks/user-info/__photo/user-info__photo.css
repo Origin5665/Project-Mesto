@@ -7,7 +7,7 @@
   background-position: center;
   -moz-transition: .2s ease;
   -webkit-transition: .2s ease;
-  transition: .2s ease;
+  transition: .3s ease;
 }
 
 
@@ -15,10 +15,12 @@
   -moz-transform: scale(1.04);
   -webkit-transform: scale(1.04);
   transform: scale(1.04);
-  box-shadow: 0px 26px 80px -19px rgba(16, 115, 207, 0.74);
+  box-shadow: 0px 0px 15px 10px rgba(68, 175, 225, 0.56)
 }
 
-
+.user-info__photo:focus {
+  box-shadow: 0px 0px 15px 10px rgba(68, 175, 225, 0.56)
+}
 
 @media screen and (max-width: 1060px) {
   .user-info__photo {

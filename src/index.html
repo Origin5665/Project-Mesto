@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Mesto</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>">
+</head>
+
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="<%=require('./images/logo.svg').default %>" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div role="button" class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class="user-info__button-edit">edit</button>
+        </div>
+
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">
+
+      <template id="template-card">
+        <div class="place-card">
+          <div class="place-card__image">
+            <button class="place-card__delete-icon"></button>
+          </div>
+          <div class="place-card__description">
+            <h3 class="place-card__name"></h3>
+            <div class="container">
+              <button class="place-card__like-icon"></button>
+              <p class="place-card__like-container"></p>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <!-- Карточка -->
+
+    <div class="popup popup__type_place" id="popup-place">
+      <div class="popup__content">
+        <img src="<%=require('./images/close.svg').default%>" alt=" кнопка закрытия формы добавления карточки"
+          class="popup__close" id="popup-place-close" />
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="card">
+          <input type="text" name="name" class="popup__input" id="name" placeholder="Название" required minlength="2"
+            maxlength="30" />
+          <span id="name-error" class="error"></span>
+          <input type="url" name="link" class="popup__input" id="link" placeholder="Ссылка на картинку" required />
+          <span id="link-error" class="error"></span>
+          <button type="submit" class="button popup__button popup__button-type_place popup__button_disabled"
+            disabled>Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Карточка -->
+
+    <!-- Профиль -->
+
+    <div class="popup popup__type_profile" id="popup-profile">
+      <div class="popup__content">
+        <img src="<%=require('./images/close.svg').default%>" alt=" кнопка закрытия формы редактирования профиля"
+          class="popup__close" id="popup-profile-close" />
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="profile" novalidate>
+          <input type="text" name="author" class="popup__input" id="author" placeholder="Имя" required minlength="2"
+            maxlength="30" />
+          <span id="author-error" class="error"></span>
+          <input type="text" name="about" class="popup__input" id="about" placeholder="О себе" required minlength="2"
+            maxlength="30" />
+          <span id="about-error" class="error"></span>
+          <button type="submit" class="button popup__button popup__button-type_profile">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Профиль -->
+
+    <!-- Изображение  -->
+
+    <div class="popup popup__type_img" id="popup-img">
+      <div class="popup__image-content">
+        <img src="<%=require('./images/close.svg').default%>" alt=" кнопка закрытия окна с изображением"
+          class="popup__close popup__close_image" id="popup-image-close" />
+        <img src="" alt="" class="popup__image" />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Изображение -->
+
+  <!-- Фото профиля -->
+
+
+
+
+  <div class="popup popup__type_photo" id="popup-photo">
+    <div class="popup__content">
+      <img src="<%=require('./images/close.svg').default%>" alt=" кнопка закрытия формы обновления фото профиля"
+        class="popup__close" id="popup-place-close" />
+      <h3 class="popup__title">Фото профиля</h3>
+      <form class="popup__form" name="photo">
+        <input type="url" name="link" class="popup__input" id="link" placeholder="Ссылка на изображение" required />
+        <span id="link-error" class="error"></span>
+        <button type="submit" class="button popup__button popup__button-type_photo popup__button_disabled"
+          disabled>Отправить</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Фото профиля -->
+
+
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+</body>
+
+</html>

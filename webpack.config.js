@@ -25,10 +25,10 @@ module.exports = {
       },
       {
          test: /\.css$/i,
-         use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader']
+         use: [(isDev ? 'style-loader' : { loader: MiniCssExtractPlugin.loader, options: { publicPath: '../', } }), 'css-loader', 'postcss-loader']
       },
       {
-         test: /\.(png|jpe?g|gif|ico|svg)$/i,
+         test: /\.(png|jpg|gif|ico|svg)$/i,
          use: [
             'file-loader?name=images/[name].[ext]',
             {
@@ -64,6 +64,7 @@ module.exports = {
       new webpack.DefinePlugin({
          'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
       }),
+
       new WebpackMd5Hash(),
 
 

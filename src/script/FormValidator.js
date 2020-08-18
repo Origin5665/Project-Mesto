@@ -2,6 +2,7 @@ export default class FormValidator {
 
    constructor(form) {
       this.form = form;
+      console.log(this.form)
       this.error = Array.from(this.form.querySelectorAll('.error'))
    }
 
@@ -19,14 +20,14 @@ export default class FormValidator {
    // Слушаем:
    setEventListeners() {
       this.form.addEventListener('input', (event) => {
-         const button = event.currentTarget.querySelector('.popup__button');
+         this.button = this.form.querySelector('.popup__button');
          const inputs = Array.from(event.currentTarget.querySelectorAll('input'));
          this.isFieldValid(event.target)
 
          if (inputs.every(this.checkInputValidity)) {
-            this.setSubmitButtonState(button, true)
+            this.setSubmitButtonState(this.button, true)
          } else {
-            this.setSubmitButtonState(button, false)
+            this.setSubmitButtonState(this.button, false)
          }
       });
    }

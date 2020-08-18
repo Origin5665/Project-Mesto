@@ -16,7 +16,6 @@ export default class Card {
 
 	create() {
 		this.newCard = this.template.cloneNode(true);
-		console.log(this.newCard)
 		this.newCard.querySelector('.place-card__name').textContent = this.cardData.name;
 		this.newCard.querySelector('.place-card__image').style.backgroundImage = `url(${this.cardData.link})`
 		this.newCard.querySelector('.place-card__like-container').textContent = this.cardData.likes.length;

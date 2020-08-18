@@ -9,7 +9,6 @@ export default class UserInfo {
 
    setUserInfo(newName, newJob) {
       this.name = newName;
-
       this.job = newJob;
    }
 

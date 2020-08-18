@@ -2,7 +2,6 @@ export default class FormValidator {
 
    constructor(form) {
       this.form = form;
-      console.log(this.form)
       this.error = Array.from(this.form.querySelectorAll('.error'))
    }
 

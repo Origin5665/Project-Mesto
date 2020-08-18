@@ -29,7 +29,7 @@ import UserInfo from './script/UserInfo';
    const placeButtonSubmit = formPlace.querySelector('.popup__button-type_place');
    const profileButtonSubmit = formProfile.querySelector('.popup__button-type_profile');
    const photoButtonSubmit = formPhoto.querySelector('.popup__button-type_photo');
-   const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort11' : 'https://praktikum.tk/cohort11';
+   const serverUrl = NODE_ENV === 'development' ? ' http://nomoreparties.co/cohort11' : ' https://nomoreparties.co/cohort11';
 
    // Конструкторы =>
 
@@ -52,7 +52,8 @@ import UserInfo from './script/UserInfo';
    const createCard = (...args) => new Card(...args, openImagePopup, newApi, template);
    const popupPhoto = new Popup(document.querySelector('.popup__type_photo'));
    const placeList = new CardList(document.querySelector('.places-list'), createCard);
-
+   const cards = document.querySelectorAll('place-card')
+   console.log(cards)
 
    // Получим карточки =>
 
